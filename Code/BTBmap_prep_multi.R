@@ -51,9 +51,9 @@ heatmap <- function(pred_values, gr, n_class, filenames){
     par(mar=rep(2,4))
     par("fin"=c(width=5.5, height=5.5))
     png(filename=paste(filenames[c]),  width = 550, height = 550)
-    plot(sdmc$window, main = "", lwd = 0.5)
-    plot(ncmap, add = TRUE)
-    #plot(ncmap)
+    #plot(sdmc$window, main = "", lwd = 0.5)
+    #plot(ncmap, add = TRUE)
+    plot(ncmap)
     plot(tp, add = TRUE, legend = FALSE, col = cpal, zlim = c(0, 1))
     dev.off()
   }
@@ -75,9 +75,9 @@ segregation_map <- function(pred_values, n_class, name, cutoff){
   par(mar=rep(2,4))
   par("fin"=c(width=5.5, height=5.5))
   png(filename = paste(name),  width = 550, height = 550)
-  plot(sdmc$window, main = "", lwd = 0.5)
-  plot(ncmap, add = TRUE)
-  #plot(ncmap)
+  #plot(sdmc$window, main = "", lwd = 0.5)
+  #plot(ncmap, add = TRUE)
+  plot(ncmap)
   for (c in 1:n_class){
     points(map$east[map[,n_class+4]==c], map$north[map[,n_class+4]==c], type="p", col=cols[c], pch=20) 
   }
