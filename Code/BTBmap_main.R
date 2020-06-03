@@ -1,9 +1,9 @@
-setwd("~")
+setwd("~/GitHub/BTB-mapping")
 path <- getwd()
 
 # install / load packages
 l <- c("splancs","geoR","lattice","raster","OpenStreetMap","spatstat","caret","dplyr","lgcp")
-# l <- c("splancs","geoR","lattice","raster","OpenStreetMap","spatstat","caret","dplyr")
+#l <- c("splancs","geoR","lattice","raster","OpenStreetMap","spatstat","caret","dplyr")
 install.packages(l)
 lapply(l, require, character.only = TRUE)
 
